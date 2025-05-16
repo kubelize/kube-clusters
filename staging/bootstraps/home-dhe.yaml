@@ -23,7 +23,7 @@ cluster:
         apiVersion: source.toolkit.fluxcd.io/v1
         kind: GitRepository
         metadata:
-          name: kube-secrets
+          name: kube-clusters
           namespace: flux-system
         spec:
           interval: 30s
