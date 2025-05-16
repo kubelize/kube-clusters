@@ -17,6 +17,8 @@ patches:
     file: patches/cilium.yaml
   - name: fluxcd
     file: patches/fluxcd.yaml
+  - name: bootstrap
+    file: bootstraps/home-dhe.yaml
 ---
 kind: Workers
 name: workers
