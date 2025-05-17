@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - gitrepository.yaml
   - csi-proxmox.yaml
+  - namespace.yaml
