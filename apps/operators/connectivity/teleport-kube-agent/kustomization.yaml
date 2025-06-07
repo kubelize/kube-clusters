@@ -3,6 +3,5 @@ kind: Kustomization
 
 resources:
   - namespace.yaml
-  - cert-manager.yaml
-  - cert-manager-addons.yaml
+  - teleport-kube-agent.yaml
   - gitrepository.yaml

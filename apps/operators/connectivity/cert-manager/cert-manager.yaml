@@ -1,13 +1,13 @@
-        apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-        kind: Kustomization
-        metadata:
-          name: cert-manager
-          namespace: cert-manager
-        spec:
-          interval: 5m0s
-          path: ./apps/operators/connectivity/cert-manager/deploy
-          prune: true
-          sourceRef:
-            kind: GitRepository
-            name: cert-manager
-            namespace: cert-manager
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: cert-manager
+  namespace: cert-manager
+spec:
+  interval: 5m0s
+  path: ./apps/operators/connectivity/cert-manager/deploy
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: cert-manager
+    namespace: cert-manager
