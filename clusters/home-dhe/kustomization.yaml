@@ -11,3 +11,7 @@ patches:
       kind: StorageClass
       name: proxmox
     path: patches/csi-proxmox/zfs-device.yaml
+  - target:
+      kind: HealmRelease
+      name: teleport-kube-agent
+      path: patches/teleport-kube-agent/patch.yaml
