@@ -26,6 +26,8 @@ spec:
               memory: 40Mi
     replicaCount: 2
     manager:
+      manager:
+      protectedNamespaceRegex: "^kube-.*|.*-system$|^flux$|^capabilities$|^cert-manager$"
       options:
         forceTenantPrefix: true
         # capsuleUserGroups:
