@@ -5,7 +5,7 @@ metadata:
   namespace: capsule-system
 spec:
   interval: 5m0s
-  path: ./apps/operators/connectivity/cert-manager/deploy
+  path: ./apps/operators/connectivity/capsule/deploy
   prune: true
   sourceRef:
     kind: GitRepository
