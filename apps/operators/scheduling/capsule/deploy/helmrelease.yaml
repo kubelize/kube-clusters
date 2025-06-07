@@ -27,7 +27,7 @@ spec:
     replicaCount: 2
     manager:
       manager:
-      protectedNamespaceRegex: "^kube-.*|.*-system$|^flux$|^capabilities$|^cert-manager$"
+      protectedNamespaceRegex: "^kube-.*|.*-system$|^flux$|^capabilities$|^cert-manager$|^teleport-kube-agent$"
       options:
         forceTenantPrefix: true
         # capsuleUserGroups:
