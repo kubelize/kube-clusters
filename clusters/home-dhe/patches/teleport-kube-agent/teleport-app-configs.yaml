@@ -4,11 +4,8 @@ metadata:
   name: teleport-kube-agent
   namespace: teleport-kube-agent
 spec:
-  values:
+  values:        
     kubeClusterName: home-dhe
-    highAvailability:
-      replicaCount: 2
-      requireAntiAffinity: true
     apps:
       - name: dhe-pve
         uri: https://10.130.5.120:8006

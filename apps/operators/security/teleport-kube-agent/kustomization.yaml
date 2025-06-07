@@ -3,5 +3,6 @@ kind: Kustomization
 
 resources:
   - namespace.yaml
-  - teleport-kube-agent.yaml
+  - helmrepository.yaml
+  - helmrelease.yaml
   - gitrepository.yaml

@@ -56,3 +56,6 @@ spec:
       runAsUser: 9807
       seccompProfile:
         type: RuntimeDefault
+    highAvailability:
+      replicaCount: 2
+      requireAntiAffinity: true
