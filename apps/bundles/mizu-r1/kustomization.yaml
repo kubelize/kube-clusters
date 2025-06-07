@@ -6,3 +6,4 @@ resources:
   - ../packages/cilium/
   - ../packages/cert-manager/
   - ../packages/capsule/
+  - ../packages/teleport-kube-agent/

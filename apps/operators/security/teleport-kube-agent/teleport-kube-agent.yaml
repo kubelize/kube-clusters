@@ -5,7 +5,7 @@ metadata:
   namespace: teleport-kube-agent
 spec:
   interval: 5m0s
-  path: ./apps/operators/connectivity/teleport-kube-agent/deploy
+  path: ./apps/operators/security/teleport-kube-agent/deploy
   prune: true
   sourceRef:
     kind: GitRepository
