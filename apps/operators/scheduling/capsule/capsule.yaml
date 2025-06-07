@@ -1,0 +1,13 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: capsule
+  namespace: capsule-system
+spec:
+  interval: 5m0s
+  path: ./apps/operators/connectivity/cert-manager/deploy
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: capsule
+    namespace: capsule-system

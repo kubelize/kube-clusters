@@ -1,0 +1,45 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: capsule
+  namespace: capsule-system
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: capsule
+      version: 0.7.4
+      sourceRef:
+        kind: HelmRepository
+        name: capsule
+        namespace: capsule-system
+  values:
+    global:
+      jobs:
+        kubectl:
+          resources:
+            requests:
+              cpu: 20m
+              memory: 20Mi
+            limits:
+              cpu: 30m
+              memory: 40Mi
+    replicaCount: 2
+    manager:
+      options:
+        forceTenantPrefix: true
+        # capsuleUserGroups:
+        #   - (( append ))
+        #   - "kubernetes:administrator"
+        #   - "kubernetes-admins"
+        #   - "kubernetes:user"
+        #   - "kubernetes-tenant:user"
+        #   - "system:serviceaccounts:tenants"
+      hostNetwork: false
+      resources:
+        requests:
+          cpu: 200m
+          memory: 256Mi
+        limits:
+          cpu: 500m
+          memory: 1Gi

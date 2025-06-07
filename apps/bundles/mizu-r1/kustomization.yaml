@@ -5,3 +5,4 @@ resources:
   - ../packages/csi-proxmox/
   - ../packages/cilium/
   - ../packages/cert-manager/
+  - ../packages/capsule/
