@@ -12,6 +12,6 @@ patches:
       name: proxmox
     path: patches/zfs-device.yaml
   - target:
-      kind: HealmRelease
+      kind: HelmRelease
       name: teleport-kube-agent
       path: patches/teleport-apps-config.yaml
