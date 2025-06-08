@@ -3,5 +3,5 @@ kind: Kustomization
 
 resources:
   - namespace.yaml
-  - capsule.yaml
-  - gitrepository.yaml
+  - helmrelease.yaml
+  - helmrepository.yaml
