@@ -47,3 +47,5 @@ spec:
           memory: 1Gi
       webhooks:
         exclusive: true
+    certManager:
+      generateCertificates: false
