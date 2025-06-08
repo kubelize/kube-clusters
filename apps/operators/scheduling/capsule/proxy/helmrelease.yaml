@@ -17,14 +17,6 @@ spec:
     crds:
       install: true
     replicaCount: 2
-    jobs:
-    resources:
-      requests:
-        cpu: 200m
-        memory: 512Mi
-      limits:
-        cpu: 1000m
-        memory: 1Gi
     options:
       listeningPort: 9001
       logLevel: "4"
