@@ -48,4 +48,4 @@ spec:
       webhooks:
         exclusive: true
     certManager:
-      generateCertificates: false
+      generateCertificates: true
