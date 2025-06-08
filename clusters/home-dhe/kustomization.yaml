@@ -10,8 +10,8 @@ patches:
   - target:
       kind: StorageClass
       name: proxmox
-    path: patches/csi-proxmox/zfs-device.yaml
+    path: patches/zfs-device.yaml
   - target:
       kind: HealmRelease
       name: teleport-kube-agent
-      path: patches/teleport-kube-agent/teleport-apps-config.yaml
+      path: patches/teleport-apps-config.yaml
