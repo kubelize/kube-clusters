@@ -17,15 +17,3 @@ spec:
     crds:
       install: true
     replicaCount: 2
-    options:
-      listeningPort: 9001
-      logLevel: "4"
-      capsuleConfigurationName: "default"
-      ignoredUserGroups:
-        - (( append ))
-        - "kubernetes:administrator"
-        - "kubernetes-admins"
-      extraArgs:
-        - --feature-gates=SkipImpersonationReview=true
-        - --feature-gates=ProxyClusterScoped=true
-        - --feature-gates=ProxyAllNamespaced=true

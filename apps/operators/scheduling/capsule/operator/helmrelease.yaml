@@ -18,19 +18,3 @@ spec:
     manager:
       manager:
       protectedNamespaceRegex: "^kube-.*|.*-system$|^flux$|^capabilities$|^cert-manager$|^teleport-kube-agent$|^ingress-controllers$"
-      options:
-        forceTenantPrefix: true
-        capsuleUserGroups:
-        #   - (( append ))
-        #   - "kubernetes:administrator"
-        #   - "kubernetes-admins"
-        #   - "kubernetes:user"
-        #   - "kubernetes-tenant:user"
-        # - "system:serviceaccounts:tenants"
-      resources:
-        requests:
-          cpu: 200m
-          memory: 256Mi
-        limits:
-          cpu: 500m
-          memory: 1Gi
