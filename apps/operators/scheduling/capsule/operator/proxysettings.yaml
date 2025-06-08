@@ -1,0 +1,19 @@
+apiVersion: capsule.clastix.io/v1beta1
+kind: GlobalProxySettings
+metadata:
+  name: global-proxy-settings
+spec:
+  rules:
+  - subjects:
+    - kind: Group
+      name: c01-users
+    clusterResources:
+    - apiGroups:
+      - "*"
+      resources:
+      - "*"
+      operations:
+      - List
+      selector:
+        matchLabels:
+          "*": "*"
