@@ -37,7 +37,6 @@ spec:
         #   - "kubernetes:user"
         #   - "kubernetes-tenant:user"
           - "system:serviceaccounts:tenants"
-      hostNetwork: false
       resources:
         requests:
           cpu: 200m
@@ -45,7 +44,3 @@ spec:
         limits:
           cpu: 500m
           memory: 1Gi
-      webhooks:
-        exclusive: true
-    certManager:
-      generateCertificates: true
