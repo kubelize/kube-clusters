@@ -14,16 +14,6 @@ spec:
         name: capsule
         namespace: capsule-system
   values:
-    global:
-      jobs:
-        kubectl:
-          resources:
-            requests:
-              cpu: 20m
-              memory: 20Mi
-            limits:
-              cpu: 30m
-              memory: 40Mi
     replicaCount: 2
     manager:
       manager:
@@ -36,7 +26,7 @@ spec:
         #   - "kubernetes-admins"
         #   - "kubernetes:user"
         #   - "kubernetes-tenant:user"
-          - "system:serviceaccounts:tenants"
+        # - "system:serviceaccounts:tenants"
       resources:
         requests:
           cpu: 200m
