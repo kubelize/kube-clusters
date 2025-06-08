@@ -30,13 +30,13 @@ spec:
       protectedNamespaceRegex: "^kube-.*|.*-system$|^flux$|^capabilities$|^cert-manager$|^teleport-kube-agent$|^ingress-controllers$"
       options:
         forceTenantPrefix: true
-        # capsuleUserGroups:
+        capsuleUserGroups:
         #   - (( append ))
         #   - "kubernetes:administrator"
         #   - "kubernetes-admins"
         #   - "kubernetes:user"
         #   - "kubernetes-tenant:user"
-        #   - "system:serviceaccounts:tenants"
+          - "system:serviceaccounts:tenants"
       hostNetwork: false
       resources:
         requests:

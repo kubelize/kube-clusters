@@ -1,0 +1,52 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: capsule-proxy
+  namespace: capsule-system
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: capsule-proxy
+      version: 0.9.2
+      sourceRef:
+        kind: HelmRepository
+        name: capsule-proxy
+        namespace: capsule-system
+  values:
+        global:
+          jobs:
+            certs:
+              resources:
+                requests:
+                limits:
+                  cpu: 0.03
+                  memory: 40Mi
+            kubectl:
+              resources:
+                limits:
+                  cpu: 0.03
+                  memory: 40Mi
+        crds:
+          install: true
+        replicaCount: 2
+        jobs:
+        resources:
+          requests:
+            cpu: 200m
+            memory: 512Mi
+          limits:
+            cpu: 1000m
+            memory: 1Gi
+        options:
+          listeningPort: 9001
+          logLevel: "4"
+          capsuleConfigurationName: "default"
+          ignoredUserGroups:
+            - (( append ))
+            - "kubernetes:administrator"
+            - "kubernetes-admins"
+          extraArgs:
+            - --feature-gates=SkipImpersonationReview=true
+            - --feature-gates=ProxyClusterScoped=true
+            - --feature-gates=ProxyAllNamespaced=true
